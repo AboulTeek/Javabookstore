@@ -4,7 +4,7 @@ pipeline {
         stage('log version info') {
       steps {
         sh 'mvn --version'
-        sh 'mvn clean install lint:check'
+        sh 'mvn clean install test lint:check'
       }
     }
   }
