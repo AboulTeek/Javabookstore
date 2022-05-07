@@ -27,19 +27,6 @@
           <artifactId>lint-maven-plugin</artifactId>
           <version>0.0.11</version>
         </plugin>
-      <plugin>
-        <groupId>org.teiid</groupId>
-        <artifactId>vdb-plugin</artifactId>
-        <version>1.2.0</version>
-        <extensions>true</extensions>
-        <executions>
-          <execution>
-            <goals>
-              <goal>vdb</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
     </plugins>
   </build>
   <dependencies>
