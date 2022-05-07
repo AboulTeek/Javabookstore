@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>onlinebookstore</groupId>
   <artifactId>onlinebookstore</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0</version>
   <packaging>war</packaging>
   <build>
     <sourceDirectory>src</sourceDirectory>
@@ -26,7 +26,20 @@
           <groupId>com.lewisd</groupId>
           <artifactId>lint-maven-plugin</artifactId>
           <version>0.0.11</version>
-        
+        </plugin>
+      <plugin>
+        <groupId>org.teiid</groupId>
+        <artifactId>vdb-plugin</artifactId>
+        <version>1.2.0</version>
+        <extensions>true</extensions>
+        <executions>
+          <execution>
+            <goals>
+              <goal>vdb</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
   <dependencies>
