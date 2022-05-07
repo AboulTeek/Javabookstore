@@ -26,7 +26,7 @@
           <groupId>com.lewisd</groupId>
           <artifactId>lint-maven-plugin</artifactId>
           <version>0.0.11</version>
-        </plugin>
+        
     </plugins>
   </build>
   <dependencies>
