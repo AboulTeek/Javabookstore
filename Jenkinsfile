@@ -17,12 +17,13 @@ pipeline {
                 post {
                     always {
                         junit '**/surefire-reports/*.xml'
+                        archiveArtifacts artifacts: '**/target/*.war'
                     }
                 }
             }
             stage ('Integration Test') {
                 steps {
-                    sh 'mvn verify -Pfailsafe'
+                    sh 'mvn verify'
                 }
             }
             stage ('Deploy') {
