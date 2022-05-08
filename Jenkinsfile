@@ -22,5 +22,13 @@ pipeline {
                     }
                 }
             }
+            #publish junit report to jenkins
+            stage ('Publish') {
+                steps {
+                    script {
+                        publishArtifacts(artifacts: '**/target/surefire-reports/*.xml')
+                    }
+                }
+            }
     }
 }
