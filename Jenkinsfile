@@ -22,7 +22,6 @@ pipeline {
                     }
                 }
             }
-            #publish junit report to jenkins
             stage ('Publish') {
                 steps {
                     script {
