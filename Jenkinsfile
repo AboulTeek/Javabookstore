@@ -14,6 +14,11 @@ pipeline {
                 steps {
                     sh 'mvn test lint:check'
                 }
+                post {
+                    always {
+                        junit '**/surefire-reports/*.xml'
+                    }
+                }
             }
             stage ('Deploy') {
                 steps {
@@ -23,9 +28,5 @@ pipeline {
                 }
             }
         }
-        post {
-            always {
-                junit '**/surefire-reports/*.xml'
-            }
-        }
+        
 }
