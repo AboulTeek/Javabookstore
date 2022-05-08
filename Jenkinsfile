@@ -1,7 +1,6 @@
 pipeline {
     agent { 
         dockerfile { 
-            label "docker-build"
         }
     }
         stages {
