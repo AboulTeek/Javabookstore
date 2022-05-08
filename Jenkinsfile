@@ -24,6 +24,7 @@ pipeline {
                 steps {
                     sh 'mvn verify -Pfailsafe'
                 }
+            }
             stage ('Deploy') {
                 steps {
                     script {
@@ -31,6 +32,5 @@ pipeline {
                     }
                 }
             }
-        }
-    }    
-}
+        }   
+    }
