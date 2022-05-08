@@ -20,6 +20,10 @@ pipeline {
                     }
                 }
             }
+            stage ('Integration Test') {
+                steps {
+                    sh 'mvn verify -Pfailsafe'
+                }
             stage ('Deploy') {
                 steps {
                     script {
