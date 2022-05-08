@@ -22,12 +22,10 @@ pipeline {
                     }
                 }
             }
-            stage ('Publish') {
-                steps {
-                    script {
-                        publishArtifacts(artifacts: '**/target/surefire-reports/*.xml')
-                    }
-                }
+        }
+        post {
+            always {
+                junit '**/reports/junit/*.xml'
             }
-    }
+        }
 }
