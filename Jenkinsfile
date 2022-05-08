@@ -18,7 +18,7 @@ pipeline {
             stage ('Deploy') {
                 steps {
                     script {
-                        deploy adapters: [tomcat8(credentialsId: 'tomcat_deployer', path: '', url: 'http://54.227.56.71:8080/')], contextPath: '/pipeline', war: '**/*.war' 
+                        deploy adapters: [tomcat8(credentialsId: 'tomcat_deployer', path: '', url: 'http://54.227.56.71:8080/')], contextPath: '/OnlineBookStore', war: '**/*.war' 
                     }
                 }
             }
