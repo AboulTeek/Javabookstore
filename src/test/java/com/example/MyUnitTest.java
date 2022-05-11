@@ -9,7 +9,7 @@ public class MyUnitTest {
 
         String result = myUnit.concatenate("one", "two");
 
-        assertEquals("onethree", result);
+        assertEquals("onetwo", result);
 
     }
 }
